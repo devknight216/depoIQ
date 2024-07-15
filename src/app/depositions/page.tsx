@@ -1,7 +1,7 @@
 // src/app/depositions/page.tsx
 import Deposition, { IDeposition } from '../../models/Deposition';
 import connect from '../../lib/mongoose';
-import DepositionTable from '@/components/depositions/DepositionTable';
+import DepositionTable from '@/components/deposition/DepositionTable';
 
 export const metadata = {
   title: 'Depositions',
