@@ -61,7 +61,16 @@ const DepositionTable: React.FC<DepositionTableProps> = ({ datasource }) => {
                 </Text>
             ),
         },
-        { title: 'Depo Date', dataIndex: 'created_at', key: 'created_at' },
+        {
+            title: 'Depo Date', 
+            dataIndex: 'created_at', 
+            key: 'created_at',
+            render: (text: any) => {
+                const date = new Date(text);
+                const formattedDate = date.toISOString().split('T')[0];
+                return <Text>{formattedDate}</Text>;
+            },
+        },        
         { 
             title: 'CaseName', 
             dataIndex: 'caseName', 
